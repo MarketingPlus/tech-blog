@@ -35,3 +35,16 @@ const createNewBlog = async (event) => {
         }
     }
 };
+
+// Event Listeners 
+document
+    .querySelector('#new-blog-btn')
+    .addEventListener('click', openForm);
+
+document
+    .querySelector('#close-form-btn')
+    .addEventListener('click', closeForm);
+
+document
+    .querySelector('#submit-blog-home')
+    .addEventListener('click', createNewBlog);
