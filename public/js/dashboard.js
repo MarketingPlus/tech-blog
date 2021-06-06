@@ -62,3 +62,20 @@ const deleteBlog = async (event) => {
         }
     }
 }; 
+
+// Event Listeners 
+document
+    .querySelector('#new-blog-btn')
+    .addEventListener('click', openForm);
+
+document
+    .querySelector('#close-form-btn')
+    .addEventListener('click', closeForm);
+
+document
+    .querySelector('#submit-blog-btn')
+    .addEventListener('click', createNewBlog);
+
+document
+    .querySelector('#blog-list')
+    .addEventListener('click', deleteBlog);
