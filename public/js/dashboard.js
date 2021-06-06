@@ -44,3 +44,21 @@ const createNewBlog = async (event) => {
         }
     }
 };
+
+// delete a blog post 
+const deleteBlog = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+        const id = event.target.getAttribute('data-id');
+        console.log(id); 
+
+        const response = await fetch(`/api/blog/${id}`, {
+            method: 'DELETE',
+        });
+
+        if (response.ok) {
+            document.location.reload();
+        } else {
+            alert('Failed to delete blog post'); 
+        }
+    }
+}; 
