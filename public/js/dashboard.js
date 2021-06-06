@@ -79,3 +79,5 @@ document
 document
     .querySelector('#blog-list')
     .addEventListener('click', deleteBlog);
+
+    
