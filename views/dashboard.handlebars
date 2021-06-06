@@ -27,3 +27,27 @@
 </div>
 {{/each}}
 </div>
+
+
+<div class="blog-btn-container">
+    <button id='new-blog-btn' type="button" class="btn btn-primary blog-btn"> + add
+        a blog </button>
+
+    <div id='form-container' class='form-container hidden'>
+        <form action="" class="create-blog-form">
+            <label for='title'>Title:</label>
+            <input id='title-input' class="form-control form-control-lg" type="text"
+                placeholder="enter a title for your blog post here...">
+            <label for='blogContent'>Blog Post:</label>
+            <div class='form-group'>
+                <textarea id='text-input' name='new-blog' rows='7' class='form-control' placeholder='what would you like to say?'></textarea>
+            </div>
+            <div class='btn-container'>
+            <input id='submit-blog-btn' type="submit" value='Submit' class='btn btn-primary blog-btn'>
+            <button id='close-form-btn' type="button" class="btn btn-primary blog-btn"> Cancel </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
