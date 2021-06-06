@@ -23,3 +23,32 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 }); 
+
+//render user's dashboard - contains the blog posts they've created with comments 
+router.get('/dashboard', withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [
+                {
+                    model: Blog,
+                    include: [{
+                        model: Comment,
+                        include: {model: User, attributes: ['username']}
+
+                    }]
+                }, 
+            ]
+        });
+
+        const user = userData.get({ plain: true }); 
+
+        res.render('dashboard', {
+            layout: 'main',
+            user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err); 
+    }
+}); 
