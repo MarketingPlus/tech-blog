@@ -45,7 +45,7 @@ const signupFormHandler = async (event) => {
         alert('Failed to sign up.');
       }
     } else {
-      alert('please enter a username & password')
+      alert('Please enter a username & password')
     };
   };
   
