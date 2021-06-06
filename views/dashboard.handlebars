@@ -4,3 +4,26 @@
 
 </br>
 <div id='no-blogs-message' class='dashboard-sub hidden'>no blogs posted yet!</div>
+
+<div id='blog-list'>
+{{#each user.blogs as |blog|}}
+<div id='blogContainer' class="card">
+    <h2 class="card-header"> {{blog.title}}</h2>
+    <p class='blog-subheader'>Written at {{format_time blog.createdAt}} on {{format_date blog.createdAt}}</p>
+    <div class="card-body">
+        <p class="card-text">{{blog.text}}</p>
+        <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+        </div>
+    </div>
+    <h3 class='card-header comment-header'>Comments:</h3>
+    <div class="card-body">
+        {{#each blog.comments as |comment|}}
+        <div class="card-text comment-text">
+            "{{comment.text}}" - {{comment.user.username}}
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/each}}
+</div>
