@@ -24,3 +24,8 @@ const createNewComment = async (event) => {
     }
 };
 
+//Event Listeners 
+
+document
+    .querySelector('#submit-comment-btn')
+    .addEventListener('click', createNewComment);
