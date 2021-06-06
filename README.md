@@ -6,7 +6,7 @@
 
 A CMS style blog site which allows users to login, create an account, post comments and blog posts.
 
-![SCREENSHOT](https://user-images.githubusercontent.com/77607177/120131252-5b78bc00-c20b-11eb-8f6e-f1687ff2d60d.PNG)
+![SCREENSHOT](https://user-images.githubusercontent.com/77607177/120912597-eb1ede80-c6d3-11eb-9511-aef3d010584c.png)
 
 ## TABLE OF CONTENTS
 
