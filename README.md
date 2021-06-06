@@ -22,7 +22,7 @@ A CMS style blog site which allows users to login, create an account, post comme
 ## LINKS 🔗
 
 [REPOSITORY](https://github.com/MarketingPlus/tech-blog)
-[DEPLOYED]()
+[DEPLOYED](https://mighty-gorge-97116.herokuapp.com/)
 
 <a name="features"></a>
 
